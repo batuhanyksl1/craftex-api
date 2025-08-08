@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    container_name: craftex-api
+    ports:
+      - "127.0.0.1:3001:3000"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
